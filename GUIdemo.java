@@ -42,9 +42,17 @@ public void ButtonListnerssetup(){
     ActionListener buttonlistner = new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent ae){
-            System.out.println("Click !");
+            if (ae.getSource()==button1){
+                 System.out.println("Beep");
+            }else if (ae.getSource()==button2){
+                 System.out.println("Boop");
+            }
+           
         }
     };
+    
+
     button1.addActionListener(buttonlistner);
+    button2.addActionListener(buttonlistner);
 }
 }
